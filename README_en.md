@@ -1,9 +1,10 @@
 # [Magsik Module]Unlock MIUI ThemeManager
-[[English]](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/blob/main/README_en.md) [[简体中文]](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/blob/main/README.md)
 
-This is the theme cracking of the MIUI China version.
+<center>__[English](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/blob/main/README_en.md)  丨 [简体中文](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/blob/main/README.md)__</center>
 
-### Feature
+<center>This is the theme cracking of the MIUI China version.</center>
+
+## Feature
 
 - Allow unconditional use of third-party themes.
 - Allow free use of fonts listed on ThemeManager.
