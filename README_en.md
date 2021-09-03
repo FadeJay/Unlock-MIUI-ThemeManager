@@ -1,6 +1,6 @@
 # [Magsik Module]Unlock MIUI ThemeManager
 
-__[English](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/blob/main/README_en.md)  丨 [简体中文](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/blob/main/README.md)__
+__English 丨 [简体中文](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/blob/main/README.md)__
 
 This is the theme cracking of the MIUI China version.
 

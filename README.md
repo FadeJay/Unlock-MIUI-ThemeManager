@@ -1,6 +1,6 @@
 # [Magsik模块]MIUI主题破解
 
-__[English](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/blob/main/README_en.md)  丨 [简体中文](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/blob/main/README.md)__
+__[English](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/blob/main/README_en.md)  丨 简体中文__
 
 这是一个适用于中国版MIUI的主题破解。
 
