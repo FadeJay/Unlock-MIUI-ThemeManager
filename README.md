@@ -1,8 +1,8 @@
 # [Magsik模块]MIUI主题破解
 
-<center>__[English](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/blob/main/README_en.md)  丨 [简体中文](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/blob/main/README.md)__</center>
+__[English](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/blob/main/README_en.md)  丨 [简体中文](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/blob/main/README.md)__
 
-<center>这是一个适用于中国版MIUI的主题破解。</center>
+这是一个适用于中国版MIUI的主题破解。
 
 ## 功能
 
