@@ -13,10 +13,10 @@ author=余空
 description="主题/字体xx,任意使用第三方mtz."
 
 Echo() {
-echo '#!/system/bin/sh
+  echo '#!/system/bin/sh
 chmod 731 /data/system/theme
-rm -rf /data/system/package_cache/*' > $TMPDIR/service.sh
-echo '#!/system/bin/sh
+rm -rf /data/system/package_cache/*' >$TMPDIR/service.sh
+  echo '#!/system/bin/sh
 if [ ! -e "/system/app/ThemeManager/ThemeManager.apk" ]; then
   YuK=MIUIThemeManager
 else
@@ -31,7 +31,7 @@ rm -rf /data/system/package_cache/*
 chmod 775 /data/system/theme
 rm -rf /data/system/theme/rights
 rm -rf /data/app/*/com.android.thememanager*
-rm -rf /data/app/com.android.thememanager*' > $TMPDIR/uninstall.sh
+rm -rf /data/app/com.android.thememanager*' >$TMPDIR/uninstall.sh
 }
 
 ## 执行模块安装
@@ -39,24 +39,24 @@ on_install() {
   Print "________________"
   Print "  ※ 模块安装 ※"
   Print "¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯"
-  Print "- 正在刷入"
-  Print "- 正在配置Apktool,请稍后"
+  Print "- 正在刷入" && su 2000 -c cmd notification post ttt 主题破解：正在刷入 >/dev/null
+  Print "- 正在配置Apktool，请稍后" && su 2000 -c cmd notification post ttt 主题破解：正在配置Apktool，请稍后 >/dev/null
   mkdir -p /data/local/Apktool
   unzip -p "$ZIPFILE" 'Apktool.tar.xz' | tar xJ -C /data/local/Apktool >/dev/null
   chmod -R 777 /data/local/Apktool
   a() {
-  echo "Test" > /sdcard/Android/YuKongA.txt
-  if [ -e /sdcard/Android/YuKongA.txt ]; then
-    if [ -e /data/data/per.pqy.openjdk ]; then
-      sleep 0.1
+    echo "Test" >/sdcard/Android/YuKongA.txt
+    if [ -e /sdcard/Android/YuKongA.txt ]; then
+      if [ -e /data/data/per.pqy.openjdk ]; then
+        sleep 0.1
+      else
+        cp -rf /data/local/Apktool/per.pqy.openjdk /data/data
+        chmod -R 777 /data/data/per.pqy.openjdk
+      fi
+      rm -rf /sdcard/Android/YuKongA.txt
     else
-      cp -rf /data/local/Apktool/per.pqy.openjdk /data/data
-      chmod -R 777 /data/data/per.pqy.openjdk
+      a
     fi
-    rm -rf /sdcard/Android/YuKongA.txt
-  else
-    a
-  fi
   }
   a
   apktool=/data/local/Apktool/apktool/apktool.sh
@@ -71,13 +71,12 @@ on_install() {
     YuK=ThemeManager
   fi
   Path=$(pm path com.android.thememanager | sed 's/package://g')
-  Print "- 反编译的应用版本: v$versionName"
-  Print "- 应用安装路径: $Path"
+  Print "- 反编译的应用版本：v$versionName"
+  Print "- 应用安装路径：$Path"
   cp -rf $Path $apk/base.apk
   mkdir -p $MODPATH/system/app/$YuK
   Print "- 开始处理$YuK.apk"
-  Print "- 这需要15秒以上"
-  Print "- 请耐心等待"
+  Print "- 这需要15秒以上，请耐心等待" && su 2000 -c cmd notification post ttt 主题破解v$versionName：处理apk中，请耐心等待 >/dev/null
   cd $apk
   unzip -o "$apk/base.apk" 'classes*.dex' 'lib/*' -d $apk/apk1 >/dev/null
   cd $apk/apk1/
@@ -112,23 +111,23 @@ on_install() {
   cp -rf $Mod3 $apk/apk2/smali/$mod3
   cp -rf $apk/apk1/apk_origin/apktool.yml $apk/apk2
   case "$CPU_ABI" in
-      arm64*) Type=arm64 Wenj=arm64-v8a;;
-      arm*) Type=arm Wenj=armeabi-v7a;;
-      x86_64*) Type=x86_64 Wenj=x86_64;;
-      x86*) Type=x86 Wenj=x86;;
+  arm64*) Type=arm64 Wenj=arm64-v8a ;;
+  arm*) Type=arm Wenj=armeabi-v7a ;;
+  x86_64*) Type=x86_64 Wenj=x86_64 ;;
+  x86*) Type=x86 Wenj=x86 ;;
   esac
   mkdir -p $MODPATH/system/app/$YuK/lib/$Type
   cp -rf $apk/apk1/apk_origin/lib/$Wenj/* $MODPATH/system/app/$YuK/lib/$Type
   cd $apk/apk2/
   $apktool b -q -f -c $apk/apk2 -o apk2.zip
   rm -rf $apk/apk1/apk_origin
-  for file in `ls -a $apk/apk1`; do
+  for file in $(ls -a $apk/apk1); do
     if [ "${file##*.}"x = "dex"x ]; then
       old=$(echo $file | tr -d "a-zA-Z" | tr -d ".")
       if [ -Z $old ]; then
         old=1
       fi
-      new=$(echo $old|awk '{for(i=1;i<=NF;i++){$i+=1}}1')
+      new=$(echo $old | awk '{for(i=1;i<=NF;i++){$i+=1}}1')
       cp -rf $apk/apk1/$file $apk/apk2/classes$new.dex
     fi
   done
@@ -141,8 +140,8 @@ on_install() {
   Print "- 清理无用文件"
   rm -rf $apk
   case $Path in
-    /data*) rm -rf $Path;;
-    *);;
+  /data*) rm -rf $Path ;;
+  *) ;;
   esac
   dda=/data/dalvik-cache/arm
   [[ -d ${dda}64 ]] && dda=${dda}64
@@ -207,14 +206,14 @@ name=$name
 version=$Ver
 versionCode=$versionCode
 author=$author
-description=$description" > $TMPDIR/module.prop
+description=$description" >$TMPDIR/module.prop
 [ ! -f $TMPDIR/module.prop ] && abort "! 从 zip 中提取文件失败."
 
 Echo
 
 MODDIRNAME=modules_update
 MODULEROOT=$NVBASE/$MODDIRNAME
-MODID=`grep_prop id $TMPDIR/module.prop`
+MODID=$(grep_prop id $TMPDIR/module.prop)
 MODPATH=$MODULEROOT/$MODID
 rm -rf $MODPATH 2>/dev/null
 mkdir -p $MODPATH
@@ -259,5 +258,5 @@ Print "- 刷入耗时: $Duration"
 Print "________________"
 Print "  ※ 刷入成功 ※"
 Print "¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯"
-Print "- 请重启设备."
+Print "- 请重启设备." && su 2000 -c cmd notification post ttt 主题破解v$versionName：刷入成功，请重启设备 >/dev/null
 exit 0
