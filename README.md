@@ -4,6 +4,8 @@ __[English](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/blob/main/README
 
 这是一个适用于中国版MIUI的主题破解。
 
+[![Stars](https://img.shields.io/github/stars/YuKongA/Unlock_MIUI_ThemeManager?label=stars)](https://github.com/YuKongA/Unlock_MIUI_ThemeManager) [![Release](https://img.shields.io/github/v/release/YuKongA/Unlock_MIUI_ThemeManager?label=release)](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/releases/latest) [![Download](https://img.shields.io/github/downloads/YuKongA/Unlock_MIUI_ThemeManager/total)](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/releases)
+
 ## 功能
 
 - 允许无条件使用第三方主题。

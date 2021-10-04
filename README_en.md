@@ -4,6 +4,8 @@ __English 丨 [简体中文](https://github.com/YuKongA/Unlock_MIUI_ThemeManager
 
 This is the theme cracking of the MIUI China version.
 
+[![Stars](https://img.shields.io/github/stars/YuKongA/Unlock_MIUI_ThemeManager?label=stars)](https://github.com/YuKongA/Unlock_MIUI_ThemeManager) [![Release](https://img.shields.io/github/v/release/YuKongA/Unlock_MIUI_ThemeManager?label=release)](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/releases/latest) [![Download](https://img.shields.io/github/downloads/YuKongA/Unlock_MIUI_ThemeManager/total)](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/releases)
+
 ## Feature
 
 - Allow unconditional use of third-party themes.
