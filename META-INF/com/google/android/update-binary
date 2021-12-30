@@ -7,8 +7,8 @@ versionName=$(pm dump com.android.thememanager | grep -m 1 versionName | sed -n 
 ## 定义module.prop
 id=theme_pojie_apktool
 name="主题破解v${versionName} Auto"
-version=1.6.1
-versionCode=210824
+version=1.6.2
+versionCode=211230
 author=余空
 description="主题/字体xx,任意使用第三方mtz."
 
@@ -39,8 +39,8 @@ on_install() {
   Print "________________"
   Print "  ※ 模块安装 ※"
   Print "¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯"
-  Print "- 正在刷入" && su 2000 -c cmd notification post ttt 主题破解：正在刷入 >/dev/null
-  Print "- 正在配置Apktool，请稍后" && su 2000 -c cmd notification post ttt 主题破解：正在配置Apktool，请稍后 >/dev/null
+  Print "- 正在刷入" && su 2000 -c cmd notification post ttt 主题破解: 正在刷入 >/dev/null
+  Print "- 正在配置Apktool，请稍后" && su 2000 -c cmd notification post ttt 主题破解: 正在配置Apktool，请稍后 >/dev/null
   mkdir -p /data/local/Apktool
   unzip -p "$ZIPFILE" 'Apktool.tar.xz' | tar xJ -C /data/local/Apktool >/dev/null
   chmod -R 777 /data/local/Apktool
@@ -61,8 +61,8 @@ on_install() {
   a
   apktool=/data/local/Apktool/apktool/apktool.sh
   zipalign=/data/local/Apktool/apktool/openjdk/bin/zipalign
-  sed=/data/local/Apktool/sed
-  zip=/data/local/Apktool/zip
+  sed=/data/local/Apktool/apktool/openjdk/bin/sed
+  zip=/data/local/Apktool/apktool/openjdk/bin/zip
   apk=$MODPATH/Apk
   mkdir -p $apk/apk1
   if [ ! -e "/system/app/ThemeManager/ThemeManager.apk" ]; then
@@ -71,12 +71,12 @@ on_install() {
     YuK=ThemeManager
   fi
   Path=$(pm path com.android.thememanager | sed 's/package://g')
-  Print "- 反编译的应用版本：v$versionName"
-  Print "- 应用安装路径：$Path"
+  Print "- 反编译的应用版本: v$versionName"
+  Print "- 应用安装路径: $Path"
   cp -rf $Path $apk/base.apk
   mkdir -p $MODPATH/system/app/$YuK
   Print "- 开始处理$YuK.apk"
-  Print "- 这需要15秒以上，请耐心等待" && su 2000 -c cmd notification post ttt 主题破解v$versionName：处理apk中，请耐心等待 >/dev/null
+  Print "- 这需要15秒以上，请耐心等待" && su 2000 -c cmd notification post ttt 主题破解v$versionName: 处理apk中，请耐心等待 >/dev/null
   cd $apk
   unzip -o "$apk/base.apk" 'classes*.dex' 'lib/*' -d $apk/apk1 >/dev/null
   cd $apk/apk1/
@@ -239,7 +239,7 @@ print_modname() {
   Print "- 模块版本: $version"
   Print "- 模块代号: $id"
   Print "- 模块制作: $author"
-  Print "- 更新日期：$versionCode"
+  Print "- 更新日期: $versionCode"
 }
 
 print_modname
@@ -258,5 +258,5 @@ Print "- 刷入耗时: $Duration"
 Print "________________"
 Print "  ※ 刷入成功 ※"
 Print "¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯"
-Print "- 请重启设备." && su 2000 -c cmd notification post ttt 主题破解v$versionName：刷入成功，请重启设备 >/dev/null
+Print "- 请重启设备." && su 2000 -c cmd notification post ttt 主题破解v$versionName: 刷入成功，请重启设备 >/dev/null
 exit 0
