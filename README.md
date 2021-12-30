@@ -2,6 +2,10 @@
 
 __[English](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/blob/main/README_en.md)  丨 简体中文__
 
+<div align="center">
+<span style="font-weight: bold">简体中文 | <a href=README_en.md>English</a></span>
+</div>
+
 这是一个适用于中国版MIUI的主题破解。
 
 [![Stars](https://img.shields.io/github/stars/YuKongA/Unlock_MIUI_ThemeManager?label=stars)](https://github.com/YuKongA/Unlock_MIUI_ThemeManager) [![Release](https://img.shields.io/github/v/release/YuKongA/Unlock_MIUI_ThemeManager?label=release)](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/releases/latest) [![Download](https://img.shields.io/github/downloads/YuKongA/Unlock_MIUI_ThemeManager/total)](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/releases)
