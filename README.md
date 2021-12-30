@@ -1,7 +1,5 @@
 # [Magsik模块]MIUI主题破解
 
-__[English](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/blob/main/README_en.md)  丨 简体中文__
-
 <div align="center">
 <span style="font-weight: bold">简体中文 | <a href=README_en.md>English</a></span>
 </div>
