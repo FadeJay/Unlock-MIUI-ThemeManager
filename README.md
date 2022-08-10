@@ -1,12 +1,22 @@
-# [Magsik模块]MIUI主题破解
 
 <div align="center">
+
+# [Magsik模块]MIUI主题破解
+
 <span style="font-weight: bold">简体中文 | <a href=README_en.md>English</a></span>
-</div>
+
+
+
+
+<b>近期版本的 主题壁纸 应已不能成功破解，请移步 [Xposed 版本](https://github.com/qqlittleice/FuckMiuiThemeManager)。</b>
+
+---
 
 这是一个适用于中国版MIUI的主题破解。
 
 [![Stars](https://img.shields.io/github/stars/YuKongA/Unlock_MIUI_ThemeManager?label=stars)](https://github.com/YuKongA/Unlock_MIUI_ThemeManager) [![Release](https://img.shields.io/github/v/release/YuKongA/Unlock_MIUI_ThemeManager?label=release)](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/releases/latest) [![Download](https://img.shields.io/github/downloads/YuKongA/Unlock_MIUI_ThemeManager/total)](https://github.com/YuKongA/Unlock_MIUI_ThemeManager/releases)
+
+</div>
 
 ## 功能
 
